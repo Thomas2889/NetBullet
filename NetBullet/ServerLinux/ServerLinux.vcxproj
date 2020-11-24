@@ -55,15 +55,19 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'">
     <OutDir>$(SolutionDir)#out\$(Configuration)\$(Platform)\$(ProjectName)\</OutDir>
+    <IntDir>$(SolutionDir)#out\Intermediate\$(ProjectName)\$(Configuration)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <OutDir>$(SolutionDir)#out\$(Configuration)\$(Platform)\$(ProjectName)\</OutDir>
+    <IntDir>$(SolutionDir)#out\Intermediate\$(ProjectName)\$(Configuration)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <OutDir>$(SolutionDir)#out\$(Configuration)\$(Platform)\$(ProjectName)\</OutDir>
+    <IntDir>$(SolutionDir)#out\Intermediate\$(ProjectName)\$(Configuration)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'">
     <OutDir>$(SolutionDir)#out\$(Configuration)\$(Platform)\$(ProjectName)\</OutDir>
+    <IntDir>$(SolutionDir)#out\Intermediate\$(ProjectName)\$(Configuration)\</IntDir>
   </PropertyGroup>
   <ItemGroup>
     <ClCompile Include="src\ServerLinux.cpp" />
@@ -72,7 +76,7 @@
   </ItemGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>$(SolutionDir)\#in\lnx\Include\x64\;$(SolutionDir)\#in\lnx\Include\agn\</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)\#in\agn\Include\x64\;$(SolutionDir)\#in\agn\Include\agn\;$(SolutionDir)\#in\lnx\Include\x64\;$(SolutionDir)\#in\lnx\Include\agn\</AdditionalIncludeDirectories>
       <CppLanguageStandard>c++17</CppLanguageStandard>
     </ClCompile>
     <Link>
@@ -88,7 +92,7 @@ call ../##buildsteps/CopyBinaries.bat $(SolutionDir)#in\Lnx\Bin\agn\\ $(OutDir)\
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>$(SolutionDir)\#in\lnx\Include\x64\;$(SolutionDir)\#in\lnx\Include\agn\</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)\#in\agn\Include\x64\;$(SolutionDir)\#in\agn\Include\agn\;$(SolutionDir)\#in\lnx\Include\x64\;$(SolutionDir)\#in\lnx\Include\agn\</AdditionalIncludeDirectories>
       <CppLanguageStandard>c++17</CppLanguageStandard>
     </ClCompile>
     <Link>
@@ -104,7 +108,7 @@ call ../##buildsteps/CopyBinaries.bat $(SolutionDir)#in\Lnx\Bin\agn\\ $(OutDir)\
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'">
     <ClCompile>
-      <AdditionalIncludeDirectories>$(SolutionDir)\#in\lnx\Include\x86\;$(SolutionDir)\#in\lnx\Include\agn\</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)\#in\agn\Include\x86\;$(SolutionDir)\#in\agn\Include\agn\;$(SolutionDir)\#in\lnx\Include\x86\;$(SolutionDir)\#in\lnx\Include\agn\</AdditionalIncludeDirectories>
       <CppLanguageStandard>c++17</CppLanguageStandard>
     </ClCompile>
     <Link>
@@ -120,7 +124,7 @@ call ../##buildsteps/CopyBinaries.bat $(SolutionDir)#in\Lnx\Bin\agn\\ $(OutDir)\
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'">
     <ClCompile>
-      <AdditionalIncludeDirectories>$(SolutionDir)\#in\lnx\Include\x86\;$(SolutionDir)\#in\lnx\Include\agn\</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)\#in\agn\Include\x86\;$(SolutionDir)\#in\agn\Include\agn\;$(SolutionDir)\#in\lnx\Include\x86\;$(SolutionDir)\#in\lnx\Include\agn\</AdditionalIncludeDirectories>
       <CppLanguageStandard>c++17</CppLanguageStandard>
     </ClCompile>
     <Link>
